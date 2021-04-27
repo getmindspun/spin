@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Built stylesheet --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/style.css"}}" />
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}} position-relative" data-bs-target="#navbar-collapse-toggle" data-bs-offset="70" tabindex="0">
+    {{{body}}}
+    {{> footer }}
+    {{>subscribe}}
+    {{>thank-you}}
+
+    {{ghost_foot}}
+
+    {{{block "scripts"}}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script async defer src={{asset "built/ghost-theme-utils.js"}}></script>
+    <script async defer src={{asset "built/main.min.js"}}></script>
+</body>
+</html>
+
+

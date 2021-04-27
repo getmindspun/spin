@@ -1,0 +1,54 @@
+<footer class="bg-dark footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-2">
+                <div class="mt-0 py-5 col-6 d-flex justify-content-center footer-column">
+                    <div>
+                        <div class="mb-4">
+                            {{#if @site.logo}}
+                                <img class="img-fluid" width="190" src="{{@site.logo}}" title="" alt="">
+                            {{else}}
+                                {{@site.title}}
+                            {{/if}}
+                        </div>
+                        <div class="nav">
+                            {{#if @site.facebook}}<a class="text-white p-2 me-2 lh-1 bg-info" href="{{facebook_url @site.facebook}}" target="_blank"
+                                                     rel="noopener">{{> icons/facebook}}</a>{{/if}}
+                            {{#if @site.twitter}}<a class="text-white p-2 me-2 lh-1 bg-info" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">{{> icons/twitter}}</a>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-0 py-5 col-6 d-flex justify-content-center footer-column">
+                    <div>
+                        <p class="text-white mb-2 h5 fw-bold">
+                            Company
+                        </p>
+                        <ul class="list-unstyled links-white">
+                            {{#get "pages" limit="all" filter="tag:hash-company" order="title asc"}}
+                                {{#foreach pages}}
+                                    <li class="p-1">
+                                        <a class="link-light text-decoration-none" href="{{url}}">{{title}}</a>
+                                    </li>
+                                {{/foreach}}
+                            {{/get}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-2 border-top border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-end my-2">
+                    <ul class="nav justify-content-center justify-content-md-start links-white small">
+                        {{navigation type="secondary"}}
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center text-md-end my-2">
+                    <p class="m-0 small text-white-50 links-white">©{{date format="YYYY"}} All Rights Reserved by {{@site.title}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

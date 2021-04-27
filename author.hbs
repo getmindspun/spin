@@ -1,0 +1,77 @@
+{{!< default}}
+
+{{> header}}
+
+<main id="site-main" class="site-main">
+    {{!-- Everything inside the #author tags pulls data from the author --}}
+        
+        {{#author}}
+            {{> banner background=@site.cover_image}}
+        
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-md-10">
+                    <div class="card card-body">
+                        <div class="author-header d-flex p-lg-4">
+                            {{#if profile_image}}
+                                <img width="100" height="100" class="rounded-circle me-2" src="{{profile_image}}"
+                                     alt="{{name}}"/>
+                            {{else}}
+                                <span class="rounded-circle me-2">{{> "icons/avatar"}}</span>
+                            {{/if}}
+                            <div class="author-header-content col ps-4 text-left">
+                                <h1 class="h1">{{name}}</h1>
+                                {{#if bio}}
+                                    <h2 class="author-bio h5">{{bio}}</h2>
+                                {{/if}}
+                                <div class="author-meta">
+                                    {{#if location}}
+                                        <div class="author-location">{{location}}</div>
+                                    {{/if}}
+                                    <div class="author-stats pb-3">
+                                        {{plural ../pagination.total empty='No posts' singular='% post'
+                                                 plural='% posts'}}
+                                    </div>
+                                    <div class="nav">
+                                        {{#if website}}
+                                            <span class="author-social-link me-1"><a
+                                                    class="text-white p-2 me-1 lh-1 d-inline-flex bg-info"
+                                                    href="{{website}}"
+                                                    target="_blank"
+                                                    rel="noopener">{{> icons/link}}</a></span>
+                                        {{/if}}
+                                        {{#if twitter}}
+                                            <span class="author-social-link me-1"><a
+                                                    class="text-white p-2 me-1 lh-1 d-inline-flex bg-info"
+                                                    href="{{twitter_url}}"
+                                                    target="_blank"
+                                                    rel="noopener">{{> icons/twitter}}</a></span>
+                                        {{/if}}
+                                        {{#if facebook}}
+                                            <span class="author-social-link me-1"><a
+                                                    class="text-white p-2 me-1 lh-1 d-inline-flex bg-info"
+                                                    href="{{facebook_url}}"
+                                                    target="_blank"
+                                                    rel="noopener">{{> icons/facebook}}</a></span>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{/author}}
+
+    <section class="container post-feed py-5">
+        <div class="row row-cols-1 row-cols-md-3">
+            {{#foreach posts limit=9}}
+                {{> "post-card"}}
+            {{/foreach}}
+        </div>
+    </section>
+</main>
+

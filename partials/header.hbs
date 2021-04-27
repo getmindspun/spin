@@ -1,0 +1,32 @@
+<header id="main-header">
+    <nav class="navbar navbar-nav navbar-dark navbar-expand-lg shadow-sm bg-primary {{class}}">
+        <div class="container container-lg position-relative">
+            <div class="navbar-brand">
+                {{#if @site.logo}}
+                    <a class="navbar-brand logo" href="{{@site.url}}">
+                        <img height="32" src="{{@site.logo}}" alt="{{@site.title}}"/>
+                    </a>
+                {{else}}
+                    <a class="navbar-brand" href="{{@site.url}}">{{@site.title}}</a>
+                {{/if}}
+            </div>
+            <div class="order-lg-last d-flex align-items-center py-3 py-lg-0">
+                {{#if @labs.members}}
+                    <div class="d-none d-md-block">
+                        <!--suppress HtmlUnknownAnchorTarget -->
+                        <a class="btn btn-info text-nowrap text-light" href="#subscribe">Subscribe</a>
+                    </div>
+                {{/if}}
+                <button type="button" class="navbar-toggler collapsed ms-2" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-collapse-toggle" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapse-toggle">
+                <ul class="nav navbar-nav ps-lg-4">
+                    {{navigation}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

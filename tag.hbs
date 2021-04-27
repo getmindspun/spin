@@ -1,0 +1,33 @@
+{{!< default}}
+
+{{> header}}
+
+<main id="site-main" class="site-main">
+    {{#tag}}
+        {{> banner background=@site.cover_image}}
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white display-5 mb-4">{{name}}</h2>
+                    {{#if description}}
+                        <p class="lead text-white">{{description}}</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        </div>  {{!-- closes banner partial --}}
+    {{/tag}}
+    <section class="my-5 post-feed post-feed-tag">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                        {{#foreach posts limit=9}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
