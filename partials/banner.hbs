@@ -38,7 +38,7 @@ with a `no-image` class so we can style it accordingly.
         }
     }
 </style>
-<div class="site-header-background responsive-header-img py-5 d-flex align-items-center">
+<div class="site-header-background responsive-header-img py-5 d-flex align-items-center parallax">
 
 {{else}}
 
@@ -47,3 +47,7 @@ with a `no-image` class so we can style it accordingly.
 {{/if}}
 
 {{!-- NOTE: The above div must be closed in templates using this partial! --}}
+
+{{#contentFor "scripts"}}
+    <script async defer src="{{asset "built/jarallax.js"}}"></script>
+{{/contentFor}}
