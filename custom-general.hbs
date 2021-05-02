@@ -4,93 +4,27 @@
 
 {{#post}}
     {{> header}}
-    <main id="site-main" class="site-main my-5">
-        <section class="pt-5 pb-4">
-            <div class="container text-center">
-                <h1 class="h1 mb-3">{{title}}</h1>
-                <p class="lead">{{excerpt}}</p>
-            </div>
-        </section>
-        <section>
+    <main id="site-main" class="site-main py-4 my-lg-5 general-content">
+        <section class="pb-4">
             <div class="container">
-                {{content}}
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-7">
+                        <h1 class="h1 mb-3">{{title}}</h1>
+                        <p class="lead">{{excerpt}}</p>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <!-- Static -->
         <section>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 col-xl-7">
                         <div class="d-flex flex-column align-items-center">
-                            <div class="w-100">
-                                <h1 class="h1 mb-3">General</h1>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
-                            </div>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                            <!-- Wide Image  kg-card kg-image-card kg-width-wide -->
-                            <figure>
-                                <img src="{{asset "images/about-sm.jpg"}}" class="container col-md-auto px-0" alt="...">
-                            </figure>
-                            <!-- End Wide Image -->
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                            <!-- Full Width Image kg-card kg-image-card kg-width-full -->
-                            <figure>
-                                <img src="{{asset "images/about-lg.jpg"}}" class="min-vw-100 w-100">
-                            </figure>
-                            <!-- Full Width Image -->
-
-                            <!-- blockquote -->
-                            <blockquote class="border-start border-3 border-primary fw-normal p-0 ps-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
-                            <!-- End blockquote -->
-
-                            <!-- kg-gallery-card -->
-                            <figure>
-                                <div class="d-flex flex-column container vw-100 px-3">
-                                    <div class="row mb-2 g-2">
-                                        <div class="col">
-                                            <img class="img-fluid" src="{{asset "images/about-sm.jpg"}}">
-                                        </div>
-                                        <div class="col">
-                                            <img class="img-fluid" src="{{asset "images/about-sm.jpg"}}">
-                                        </div>
-                                        <div class="col">
-                                            <img class="img-fluid" src="{{asset "images/about-sm.jpg"}}">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2 g-2">
-                                        <div class="col">
-                                            <img class="img-fluid" src="{{asset "images/about-sm.jpg"}}">
-                                        </div>
-                                        <div class="col">
-                                            <img class="img-fluid" src="{{asset "images/about-sm.jpg"}}">
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                            <!-- End kg-gallery-card -->
-                            
-                            <!-- <figure class="kg-card kg-embed-card">
-                                <div class="fluid-width-video-container">
-                                    <div class="fluid-width-video-wrapper" style="padding-top: 56.1798%;">
-                                        <iframe src="https://www.youtube.com/embed/RIYoj0BHRCk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" name="fitvid0"></iframe>
-                                    </div>
-                                </div>
-                            </figure> -->
-                            <!-- Video -->
-                            <div class="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
-                            </div>
-                            <!-- End Video -->
+                            {{content}}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Static -->
     </main>
 {{/post}}
