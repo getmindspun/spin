@@ -11,43 +11,65 @@ with a `no-image` class so we can style it accordingly.
 
 {{#if background}}
 
-<style>
-    .responsive-header-img {
-        background-image: url({{img_url background size='xl'}});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        min-height: 55vh;
-    }
-    @media(max-width: 1000px) {
+    <style>
         .responsive-header-img {
-            background-image: url({{img_url background size='l'}});
-            background-image: -webkit-image-set(url({{img_url background size='l'}}) 1x,
-                url({{img_url background size='xl'}}) 2x);
-            background-image: image-set(url({{img_url background size='l'}}) 1x,
-                url({{img_url background size='xl'}}) 2x);
+            background-image: url({{img_url background size='xl'}});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 55vh;
         }
-    }
-    @media(max-width: 600px) {
-        .responsive-header-img {
-            background-image: url({{img_url background size='m'}});
-            background-image: -webkit-image-set(url({{img_url background size='m'}}) 1x,
-                url({{img_url background size='l'}}) 2x);
-            background-image: image-set(url({{img_url background size='m'}}) 1x,
-                url({{img_url background size='l'}}) 2x);
+
+        @media (max-width: 1000px) {
+            .responsive-header-img {
+                background-image: url({{img_url background size='l'}});
+                background-image: -webkit-image-set(url({{img_url background size='l'}}) 1x,
+                url({{img_url background size='xl'}}) 2x);
+                background-image: image-set(url({{img_url background size='l'}}) 1x,
+                url({{img_url background size='xl'}}) 2x);
+            }
         }
-    }
-</style>
-<div class="site-header-background responsive-header-img py-5 d-flex align-items-center parallax">
+
+        @media (max-width: 600px) {
+            .responsive-header-img {
+                background-image: url({{img_url background size='m'}});
+                background-image: -webkit-image-set(url({{img_url background size='m'}}) 1x,
+                url({{img_url background size='l'}}) 2x);
+                background-image: image-set(url({{img_url background size='m'}}) 1x,
+                url({{img_url background size='l'}}) 2x);
+            }
+        }
+
+        .parallax::before {
+            z-index: -50;
+            background-color: black;
+            opacity: 40%;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+    <div data-jarallax class="site-header-background responsive-header-img py-5 d-flex align-items-center parallax">
 
 {{else}}
+    <style>
+        .no-image {
+            background-color: var(--bs-primary);
+            background-image: var(--bs-gradient);
+        }
+    </style>
 
-<div class="site-header-background no-image py-5 d-flex align-items-center">
+    <div class="site-header-background no-image py-5 d-flex align-items-center">
 
 {{/if}}
 
 {{!-- NOTE: The above div must be closed in templates using this partial! --}}
 
 {{#contentFor "scripts"}}
-    <script async defer src="{{asset "built/jarallax.js"}}"></script>
+        <script async defer src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+        <!-- Include it if you want to use Video parallax -->
+        <!-- <script src="https://unpkg.com/jarallax@1/dist/jarallax-video.min.js"></script> -->
 {{/contentFor}}

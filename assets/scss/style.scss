@@ -1,6 +1,8 @@
 @import "bootstrap";
-@import "../../node_modules/ghost-theme-utils/scss/koenig";
-@import "../../node_modules/ghost-theme-utils/scss/subscribe";
+
+@import "../../node_modules/ghost-theme-utils/dist/css/style.css";
+
+@import "../../node_modules/jarallax/dist/jarallax.css";
 
 // btn-accent
 // This definition prevents 'flicker' from the JS-generated class.
