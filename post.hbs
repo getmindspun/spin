@@ -47,6 +47,20 @@
                         </div>
                     </div>
                     <div class="col-lg-4 mt-5 mt-lg-0 ps-xl-5">
+                        <div class="card">
+                            <div class="card-header bg-transparent">
+                                <span class="h5 m-0">Search</span>
+                            </div>
+                            <div class="card-body">
+                                <form class="d-flex flex-row input-group">
+                                    <input class="form-control fs-6 form-control-lg rounded-0" placeholder="Search" />
+                                    <button class="btn btn-primary flex-shrink-0 rounded-0 border-0 py-0 px-3" type="submit">
+                                        <span class="fs-4 lh-1 text-light">{{> icons/search}}</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
                         {{#if @labs.members}}
                             <div class="card blog-subscribe">
                                 <div class="card-header bg-transparent">
