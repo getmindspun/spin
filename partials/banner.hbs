@@ -41,6 +41,12 @@ with a `no-image` class so we can style it accordingly.
 <div class="site-header-background responsive-header-img py-5 d-flex align-items-center">
 
 {{else}}
+    <style>
+        .no-image {
+            background-color: var(--bs-primary);
+            background-image: var(--bs-gradient);
+        }
+    </style>
 
 <div class="site-header-background no-image py-5 d-flex align-items-center">
 
