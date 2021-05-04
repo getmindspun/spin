@@ -40,7 +40,7 @@
         "beeper": "^2.1.0",
         "bootstrap": "^5.0.0-beta3",
         "elasticlunr": "^0.9.5",
-        "ghost-theme-utils": "^1.6.0",
+        "ghost-theme-utils": "^1.7.0",
         "gscan": "^4.0.0",
         "gulp": "^4.0.2",
         "gulp-clean": "^0.4.0",
