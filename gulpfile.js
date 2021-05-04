@@ -52,7 +52,7 @@ function scss(done) {
 function js(done) {
     pump([
         gulp.src([
-            'node_modules/ghost-theme-utils/dist/js/*.js',
+            'node_modules/ghost-theme-utils/dist/js/ghost-theme-utils.js',
             'node_modules/elasticlunr/elasticlunr.js',
             'assets/js/lib/*.js',
             'assets/js/main.js'
