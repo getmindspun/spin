@@ -47,22 +47,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 mt-5 mt-lg-0 ps-xl-5">
-                        <div class="card">
-                            <div class="card-header bg-transparent">
-                                <span class="h5 m-0">Search</span>
-                            </div>
-                            <div class="card-body">
-                                <form class="d-flex flex-row input-group">
-                                    <input class="form-control fs-6 form-control-lg rounded-0" placeholder="Search" />
-                                    <button class="btn btn-primary flex-shrink-0 rounded-0 border-0 py-0 px-3" type="submit">
-                                        <span class="fs-4 lh-1 text-light">{{> icons/search}}</span>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-
                         {{#if @labs.members}}
-                            <div class="card blog-subscribe">
+                            <div class="card blog-subscribe mb-3">
                                 <div class="card-header bg-transparent">
                                     <span class="h5 m-0">Subscribe to {{@site.title}}</span>
                                 </div>
@@ -72,15 +58,32 @@
                             </div>
                         {{/if}}
 
+                        <div class="card mb-3 d-none">
+                            <div class="card-header bg-transparent">
+                                <span class="h5">Search</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-row input-group">
+                                    <input class="form-control fs-6 form-control-lg rounded-0 search-field"
+                                           placeholder="Search"/>
+                                    <button class="btn btn-primary flex-shrink-0 rounded-0 border-0 py-0 px-3 search-button">
+                                        <span class="fs-4 lh-1 text-light">{{> icons/search}}</span>
+                                    </button>
+                                </div>
+                                <div class="search-result"></div>
+                            </div>
+                        </div>
+
                         {{!-- Recent blog posts --}}
                         {{#get "posts" order="published_at desc" limit="4"}}
-                            <div class="card mt-4 border-bottom-0">
+                            <div class="card mb-3 border-bottom-0">
                                 <div class="card-header bg-transparent">
                                     <span class="h5 m-0">Recent Posts</span>
                                 </div>
                                 <div class="list-group">
                                     {{#foreach posts}}
-                                        <a href="{{url}}" class="border-bottom p-3 d-flex text-decoration-none text-reset">
+                                        <a href="{{url}}"
+                                           class="border-bottom p-3 d-flex text-decoration-none text-reset">
                                             {{#if feature_image}}
                                                 <img class="rounded me-2 img-fluid" width="48"
                                                      src="{{img_url feature_image}}" alt="{{title}}">
@@ -94,7 +97,7 @@
                         {{!-- Recent blog posts --}}
 
                         {{!-- Blog tags --}}
-                        <div class="card mt-4">
+                        <div class="card">
                             <div class="card-header bg-transparent">
                                 <span class="h5 m-0">Tags</span>
                             </div>
