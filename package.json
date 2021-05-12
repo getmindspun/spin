@@ -32,8 +32,8 @@
     },
     "homepage": "https://github.com/getmindspun/spin#readme",
     "engines": {
-        "ghost": ">=3.0.0",
-        "ghost-api": "v3"
+        "ghost": ">=4.0.0",
+        "ghost-api": "v4"
     },
     "devDependencies": {
         "@popperjs/core": "^2.9.2",
