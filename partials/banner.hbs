@@ -40,8 +40,11 @@ with a `no-image` class so we can style it accordingly.
             }
         }
 
+        .responsive-header-img > * {
+            z-index: 1000;
+        }
+
         .parallax::before {
-            z-index: -50;
             background-color: black;
             opacity: 40%;
             content: '';
@@ -52,7 +55,7 @@ with a `no-image` class so we can style it accordingly.
             width: 100%;
         }
     </style>
-    <div data-jarallax data-speed="0.2" class="site-header-background responsive-header-img py-5 d-flex align-items-center parallax">
+    <div data-jarallax data-speed="0.2" class="site-header-background responsive-header-img py-5 d-flex align-items-center position-relative parallax">
 
 {{else}}
     <style>
