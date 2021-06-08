@@ -13,8 +13,8 @@
                         </div>
                         <div class="nav">
                             {{#if @site.facebook}}<a class="text-white p-2 me-2 lh-1 bg-info" href="{{facebook_url @site.facebook}}" target="_blank"
-                                                     rel="noopener">{{> icons/facebook}}</a>{{/if}}
-                            {{#if @site.twitter}}<a class="text-white p-2 me-2 lh-1 bg-info" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">{{> icons/twitter}}</a>{{/if}}
+                                                     rel="noopener"><span class="visually-hidden">Facebook</span>{{> icons/facebook}}</a>{{/if}}
+                            {{#if @site.twitter}}<a class="text-white p-2 me-2 lh-1 bg-info" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener"><span class="visually-hidden">Twitter</span>{{> icons/twitter}}</a>{{/if}}
                         </div>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-end my-2">
-                    <ul class="nav justify-content-center justify-content-md-start links-white small">
+                    <div class="nav justify-content-center justify-content-md-start links-white small">
                         {{navigation type="secondary"}}
-                    </ul>
+                    </div>
                 </div>
                 <div class="col-md-6 text-center text-md-end my-2">
                     <p class="m-0 small text-white-50 links-white">©{{date format="YYYY"}} All Rights Reserved by {{@site.title}}</p>
