@@ -1,3 +1,8 @@
+$white: #fff !default;
+
+$navbar-dark-color:                 $white !default;
+$navbar-dark-hover-color:           rgba($white, .75) !default;
+
 @import "bootstrap";
 
 @import "../../node_modules/ghost-theme-utils/dist/css/style";
