@@ -38,7 +38,7 @@
     "devDependencies": {
         "@popperjs/core": "^2.9.2",
         "beeper": "^2.1.0",
-        "bootstrap": "^5.0.0-beta3",
+        "bootstrap": "^5.1.0",
         "elasticlunr": "^0.9.5",
         "ghost-theme-utils": "^1.7.0",
         "gscan": "^4.0.0",
@@ -76,6 +76,5 @@
             }
         },
         "dependencies": {}
-    },
-    "dependencies": {}
+    }
 }
